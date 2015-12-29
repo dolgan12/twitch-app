@@ -1,0 +1,51 @@
+f1d52b -yellow
+f0a562 -orange
+f05f66 -red
+f0a2bc -pink
+b98fbf -purple
+3392ca -blue
+59c2e2 -lightblue
+c2d67f -green
+
+
+.yellow {
+  background: #eae672;
+  -webkit-transform: rotate(2deg);
+  -moz-transform: rotate(2deg);
+  -o-transform: rotate(2deg);
+  -ms-transform: rotate(2deg);
+  transform: rotate(2deg);
+}
+.green {
+  background: #4be75f;
+  -webkit-transform: rotate(-2deg);
+  -moz-transform: rotate(-2deg);
+  -o-transform: rotate(-2deg);
+  -ms-transform: rotate(-2deg);
+  transform: rotate(-2deg);
+}
+
+for (var i = 0; i < array.length; i++) {
+    (function(i) { // protects i in an immediately called function
+      $.getJSON('/api.php?action=query&list=querypage&qppage=' + array[i] + '&format=json', function (data) {
+        $('#' + array[i]).text(data.query.querypage.results.length);
+      });
+    })(i);
+}
+
+$.getJSON("/echo/json").success(function(data) {
+  console.log("first: " + new Date().getTime());
+}).then(function() {
+  console.log("second:" + new Date().getTime())
+});
+
+<div class="post-it">
+<!--    <i class="pin"></i> -->
+  <blockquote class="note yellow">
+    We can't solve problems by using the same kind of thinking we used when we created them.
+    <cite class="author">Albert Einstein</cite>
+  </blockquote>
+</div>
+RobotCaleb
+medrybw
+brunofin
